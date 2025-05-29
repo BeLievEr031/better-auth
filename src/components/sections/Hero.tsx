@@ -1,6 +1,6 @@
-import { CodeBlock } from './CodeBlock';
+import { CodeBlock } from '../CodeBlock';
 import { TbProgressBolt } from "react-icons/tb";
-import { Spotlight } from './ui/Spotlight';
+import { Spotlight } from '../ui/Spotlight';
 function Hero() {
     return (
         <section className="max-h-[40rem] relative w-full flex md:items-center md:justify-center antialiased bg-grid-pattern-white bg-background overflow-hidden px-8 md:min-h-[40rem]">
