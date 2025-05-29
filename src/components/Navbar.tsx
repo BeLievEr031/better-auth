@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoMdMoon } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const Navbar: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const location = useLocation();
+    console.log(location.pathname);
 
     return (
         <div className="flex flex-col sticky top-0 bg-background backdrop-blur-md z-30">
@@ -40,11 +42,10 @@ const Navbar: React.FC = () => {
                 <div className="md:col-span-10 flex items-center justify-end relative ">
                     <ul className="md:flex items-center divide-x divide-border w-max hidden shrink-0">
                         {[
-                            { href: "/", label: "helo_", active: true },
-                            { href: "/docs", label: "docs" },
-                            // { href: "/blogs", label: "blog" },
-                            { href: "/changelogs", label: "changelogs" },
-                            { href: "/community", label: "community" },
+                            { href: "/", label: "helo_", active: location.pathname.includes("/") && location.pathname === "/" },
+                            { href: "/docs", label: "docs", active: location.pathname.includes("/docs") },
+                            { href: "/changelogs", label: "changelogs", active: location.pathname.includes("/changelogs") },
+                            { href: "/community", label: "community", active: location.pathname.includes("/community") },
                         ].map(({ href, label, active }) => (
                             <li key={href} className="relative group">
                                 <Link
