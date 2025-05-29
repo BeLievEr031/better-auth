@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import textShadow from 'tailwindcss-textshadow'
 export default {
   content: [
     "./index.html",
@@ -61,7 +62,13 @@ export default {
           },
         },
       },
+      textShadow: {
+        gold: '0px 0px 2px rgb(57, 58, 51), 0px 0px 8px rgba(243, 159, 5, 0.46), 0px 0px 2px rgba(243, 159, 5, 0.46)',
+        emeraldGlow: 'rgb(16, 12, 15) 0px 0px 2px, rgba(37, 124, 85, 0.46) 0px 0px 10px, rgba(33, 39, 36, 0.46) 0px 0px 35px',
+        neonGlow: 'rgb(16, 12, 15) 0px 0px 2px, rgba(220, 7, 142, 0.2) 0px 0px 5px, rgba(255, 255, 255, 0.2) 0px 0px 10px',
+        aquaGlow: 'rgb(0, 23, 22) 0px 0px 2px,rgba(3, 237, 249, 0.46) 0px 0px 3px,rgba(3, 237, 249, 0.46) 0px 0px 5px,rgba(3, 237, 249, 0.46) 0px 0px 8px'
+      },
     },
   },
-  plugins: [],
+  plugins: [textShadow],
 }

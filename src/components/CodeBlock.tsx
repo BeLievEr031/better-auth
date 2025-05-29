@@ -34,33 +34,31 @@ export const CodeBlock = () => (
 
                             if (token.content === "DATABASE_URL") {
                                 return <span key={key} {...getTokenProps({ token })}
+                                    className="dark:text-[rgb(249_42_173)] dark:text-shadow-emeraldGlow text-yellow-700s"
                                     style={{
-                                        color: `rgb(249, 42, 173)`,
-                                        textShadow: `rgb(16, 12, 15) 0px 0px 2px, rgba(220, 7, 142, 0.2) 0px 0px 5px, rgba(255, 255, 255, 0.2) 0px 0px 10px`
+                                        // color: "white"
                                     }}
                                 />
                             }
 
                             if (highLightTextWithBlue(token.content)) {
                                 return <span key={key} {...getTokenProps({ token })}
+                                    className="dark:text-shadow-aquaGlow dark:text-[rgb(253_253_253)] text-blue-600"
                                     style={{
-                                        color: `rgb(253, 253, 253)`,
-                                        textShadow: `rgb(0, 23, 22) 0px 0px 2px,rgba(3, 237, 249, 0.46) 0px 0px 3px,rgba(3, 237, 249, 0.46) 0px 0px 5px,rgba(3, 237, 249, 0.46) 0px 0px 8px`
+                                        // color: "white"
                                     }}
+
                                 />
                             } else if (["export", "const", "new", "Pool"].includes(token.content)) {
                                 return <span key={key} {...getTokenProps({ token })}
+                                    className="dark:text-[rgb(253_253_253)] dark:text-shadow-gold text-fuchsia-600"
                                     style={{
-                                        color: `rgb(244, 238, 228)`,
-                                        textShadow: `rgb(57, 58, 51) 0px 0px 2px, rgba(243, 159, 5, 0.46) 0px 0px 8px, rgba(243, 159, 5, 0.46) 0px 0px 2px`
+                                        // color: "white"
                                     }}
                                 />
                             } else {
                                 return <span key={key} {...getTokenProps({ token })}
-                                    style={{
-                                        color: `rgb(114, 241, 184)`,
-                                        textShadow: `rgb(16, 12, 15) 0px 0px 2px, rgba(37, 124, 85, 0.46) 0px 0px 10px, rgba(33, 39, 36, 0.46) 0px 0px 35px`
-                                    }}
+                                    className="dark:text-shadow-emeraldGlow dark:text-[rgb(114_241_184)] text-orange-600"
                                 />
                             }
                         }

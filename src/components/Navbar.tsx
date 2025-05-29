@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import { IoMdMoon } from "react-icons/io";
+// import { IoMdMoon } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
 const Navbar: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -78,9 +78,9 @@ const Navbar: React.FC = () => {
 
                         </li>
                     </ul>
-                    <button className="border-l-border border-l-2 items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground size-9 flex ring-0 shrink-0 md:w-[3.56rem] md:h-14 md:border-l-border md:text-muted-foreground max-md:-mr-1.5 max-md:hover:bg-transparent" aria-label="Toggle Theme" type="button" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+                    {/* <button className="border-l-border border-l-2 items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground size-9 flex ring-0 shrink-0 md:w-[3.56rem] md:h-14 md:border-l-border md:text-muted-foreground max-md:-mr-1.5 max-md:hover:bg-transparent" aria-label="Toggle Theme" type="button" aria-haspopup="menu" aria-expanded="false" data-state="closed">
                         <IoMdMoon size={24} />
-                    </button>
+                    </button> */}
 
                     <button
                         aria-label="Mobile nav icon"
