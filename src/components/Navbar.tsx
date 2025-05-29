@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoMdMoon } from "react-icons/io";
+import { Link } from "react-router-dom";
 const Navbar: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
         <div className="flex flex-col sticky top-0 bg-background backdrop-blur-md z-30">
             <nav className="md:grid grid-cols-12 md:border-b border-border top-0 flex items-center justify-between" >
-                <a
+                <Link
                     className="md:border-r border-border md:px-5 px-2.5 py-4 text-foreground md:col-span-2 shrink-0 transition-colors md:w-[268px] lg:w-[286px]"
-                    href="/"
+                    to="/"
                 >
                     <div className="flex flex-col gap-2 w-full">
                         <div className="relative">
@@ -35,25 +36,24 @@ const Navbar: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                </a>
+                </Link>
                 <div className="md:col-span-10 flex items-center justify-end relative ">
                     <ul className="md:flex items-center divide-x divide-border w-max hidden shrink-0">
                         {[
                             { href: "/", label: "helo_", active: true },
                             { href: "/docs", label: "docs" },
-                            { href: "/blogs", label: "blog" },
+                            // { href: "/blogs", label: "blog" },
                             { href: "/changelogs", label: "changelogs" },
                             { href: "/community", label: "community" },
                         ].map(({ href, label, active }) => (
                             <li key={href} className="relative group">
-                                <a
-                                    href={href}
-                                    target="_parent"
+                                <Link
+                                    to={href}
                                     className={`w-full h-full block py-4 px-5 transition-colors group-hover:text-foreground ${active ? "text-foreground" : "text-muted-foreground"
                                         }`}
                                 >
                                     {label}
-                                </a>
+                                </Link>
                                 <div
                                     className={`absolute bottom-0 h-0.5 bg-muted-foreground transition-all duration-500 ${active
                                         ? "opacity-100 w-full"
@@ -101,17 +101,17 @@ const Navbar: React.FC = () => {
                             {[
                                 { href: "/", label: "helo_", active: true },
                                 { href: "/docs", label: "docs" },
-                                { href: "/blogs", label: "blog" },
+                                // { href: "/blogs", label: "blog" },
                                 { href: "/changelogs", label: "changelogs" },
                                 { href: "/community", label: "community" },
                             ].map(({ href, label, active }) => (
                                 <li key={href}>
-                                    <a
-                                        href={href}
+                                    <Link
+                                        to={href}
                                         className={`block w-full py-4 px-5 transition-colors hover:text-foreground ${active ? "text-foreground" : "text-muted-foreground"}`}
                                     >
                                         {label}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

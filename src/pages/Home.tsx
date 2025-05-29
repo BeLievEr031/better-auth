@@ -1,16 +1,14 @@
-import Header from "./components/Header"
-import Navbar from "./components/Navbar"
-import Hero from "./components/sections/Hero";
-import Features from "./components/sections/Features";
-import Testimonial from "./components/sections/Testimonial";
-import RippleEffect from "./components/RippleEffect";
-import VerticalLines from "./components/VerticalLines"
+import Header from "../components/Header"
+import Hero from "../components/sections/Hero";
+import Features from "../components/sections/Features";
+import Testimonial from "../components/sections/Testimonial";
+import RippleEffect from "../components/RippleEffect";
+import VerticalLines from "../components/VerticalLines"
 
 
-function App() {
+function Home() {
   return (
     <div className="bg-background text-foreground overflow-x-clip">
-      <Navbar />
       <Header />
       <div className="relative overflow-y-clip">
         <Hero />
@@ -27,4 +25,4 @@ function App() {
   )
 }
 
-export default App
+export default Home
