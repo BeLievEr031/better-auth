@@ -204,7 +204,7 @@ function Hero() {
                                                 </button>
                                             </div>
                                             <div>
-                                                <CodeBlock />;
+                                                <CodeBlock />
                                             </div>
                                             <div className="self-end">
                                                 <a
